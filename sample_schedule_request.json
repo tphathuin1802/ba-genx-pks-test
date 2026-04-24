@@ -1,0 +1,35 @@
+{
+  "schedule_request": {
+    "request_id": "sch-req-20260422-001",
+    "course_id": "course-123-abc",
+    "class_id": "class-456-def",
+    "created_by": "admin-user-789",
+    "parameters": {
+      "number_of_sessions": 20,
+      "weekdays": [2, 4, 6],
+      "start_date": "2026-05-01",
+      "holidays": [
+        {
+          "date": "2026-04-30",
+          "name": "Ngày Thống nhất đất nước"
+        },
+        {
+          "date": "2026-05-01",
+          "name": "Ngày Quốc tế Lao động"
+        },
+        {
+          "date": "2026-09-02",
+          "name": "Quốc khánh"
+        }
+      ],
+      "long_breaks": [
+        {
+          "name": "Nghỉ Tết Nguyên đán 2027",
+          "start_date": "2027-01-28",
+          "end_date": "2027-02-05"
+        }
+      ]
+    },
+    "created_at": "2026-04-22T10:30:00Z"
+  }
+}

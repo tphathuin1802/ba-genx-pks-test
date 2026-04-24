@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán học phí - GENX PK STORY</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container-header">
+            <div class="header-left">
+                <div class="logo-wrapper">
+                    <span class="logo-icon">🎓</span>
+                    <h1 class="logo">GENX PK STORY</h1>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-profile">
+                    <div class="avatar">
+                        <span>NA</span>
+                    </div>
+                    <span class="user-name" id="userName">Nguyễn Văn A</span>
+                </div>
+                <button class="notification-btn" aria-label="Thông báo">
+                    <span class="notification-icon">🔔</span>
+                    <span class="notification-badge">2</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="content-wrapper">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="#" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Quay lại</span>
+                </a>
+            </nav>
+
+            <div class="page-header">
+                <h2 class="page-title">Thanh toán học phí</h2>
+                <p class="page-subtitle">Hoàn tất thanh toán để kích hoạt tài khoản học tập của bạn</p>
+            </div>
+
+            <div class="layout-grid">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <!-- Course Information -->
+                    <section class="card course-card">
+                        <div class="card-header">
+                            <div class="card-icon">📚</div>
+                            <div>
+                                <h3 class="card-title">Thông tin khóa học</h3>
+                                <p class="card-subtitle">Chi tiết về khóa học bạn đã đăng ký</p>
+                            </div>
+                        </div>
+                        <div class="course-details">
+                            <div class="detail-item highlight">
+                                <span class="detail-label">Khóa học</span>
+                                <span class="detail-value" id="courseName">Toán học lớp 10 - Kỳ 1</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Mã lớp</span>
+                                <span class="detail-value" id="classCode">MATH-2025-01</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Giảng viên</span>
+                                <span class="detail-value">
+                                    <span class="instructor-avatar">👨‍🏫</span>
+                                    <span id="instructorName">Thầy Trần Văn B</span>
+                                </span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Thời gian</span>
+                                <span class="detail-value">
+                                    <span class="date-icon">📅</span>
+                                    <span id="duration">05/05/2025 - 31/08/2025</span>
+                                </span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Tổng số buổi</span>
+                                <span class="detail-value">
+                                    <span class="badge badge-primary" id="totalSessions">24 buổi</span>
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Payment Method -->
+                    <section class="card payment-method-card">
+                        <div class="card-header">
+                            <div class="card-icon">💳</div>
+                            <div>
+                                <h3 class="card-title">Phương thức thanh toán</h3>
+                                <p class="card-subtitle">Chọn cách bạn muốn thanh toán</p>
+                            </div>
+                        </div>
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="bank_transfer" checked>
+                                <div class="payment-content">
+                                    <div class="payment-icon">🏦</div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Chuyển khoản ngân hàng</span>
+                                        <span class="payment-desc">Miễn phí • Xác nhận tức thì</span>
+                                    </div>
+                                </div>
+                                <div class="radio-indicator"></div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="e_wallet">
+                                <div class="payment-content">
+                                    <div class="payment-icon">📱</div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Ví điện tử</span>
+                                        <span class="payment-desc">Momo, ZaloPay, VNPay</span>
+                                    </div>
+                                </div>
+                                <div class="radio-indicator"></div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="credit_card">
+                                <div class="payment-content">
+                                    <div class="payment-icon">💳</div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Thẻ tín dụng/Ghi nợ</span>
+                                        <span class="payment-desc">Visa, MasterCard, JCB</span>
+                                    </div>
+                                </div>
+                                <div class="radio-indicator"></div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="cash">
+                                <div class="payment-content">
+                                    <div class="payment-icon">💵</div>
+                                    <div class="payment-info">
+                                        <span class="payment-name">Tiền mặt tại văn phòng</span>
+                                        <span class="payment-desc">133/3 Đỗ Xuân Hợp, TP.HCM</span>
+                                    </div>
+                                </div>
+                                <div class="radio-indicator"></div>
+                            </label>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <!-- Pricing Card -->
+                    <div class="sticky-wrapper">
+                        <section class="card pricing-card">
+                            <div class="card-header">
+                                <div class="card-icon">💰</div>
+                                <h3 class="card-title">Chi tiết thanh toán</h3>
+                            </div>
+
+                            <!-- Package Selection -->
+                            <div class="package-selection">
+                                <label class="package-option">
+                                    <input type="radio" name="paymentType" value="MONTHLY" id="monthlyRadio">
+                                    <div class="package-content">
+                                        <div class="package-header">
+                                            <span class="package-name">Theo tháng</span>
+                                            <span class="package-badge">Linh hoạt</span>
+                                        </div>
+                                        <p class="package-desc">Thanh toán theo từng tháng học</p>
+                                    </div>
+                                </label>
+                                <label class="package-option active">
+                                    <input type="radio" name="paymentType" value="FULL_COURSE" id="fullCourseRadio" checked>
+                                    <div class="package-content">
+                                        <div class="package-header">
+                                            <span class="package-name">Trọn gói</span>
+                                            <span class="package-badge popular">Tiết kiệm</span>
+                                        </div>
+                                        <p class="package-desc">Thanh toán 1 lần cho toàn khóa</p>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Months Selector -->
+                            <div class="months-selector" id="monthsSection" style="display: none;">
+                                <label class="input-label">Số tháng đăng ký</label>
+                                <div class="months-grid">
+                                    <button type="button" class="month-btn" data-months="1">
+                                        <span class="month-number">1</span>
+                                        <span class="month-label">tháng</span>
+                                    </button>
+                                    <button type="button" class="month-btn active" data-months="2">
+                                        <span class="month-number">2</span>
+                                        <span class="month-label">tháng</span>
+                                    </button>
+                                    <button type="button" class="month-btn" data-months="3">
+                                        <span class="month-number">3</span>
+                                        <span class="month-label">tháng</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+
+                            <!-- Price Breakdown -->
+                            <div class="price-breakdown">
+                                <div class="price-row">
+                                    <span class="price-label">Học phí cơ bản</span>
+                                    <span class="price-value" id="baseAmount">5,000,000 đ</span>
+                                </div>
+                                <div class="price-calculation" id="baseCalculation" style="display: none;">
+                                    <span class="calculation-text"></span>
+                                </div>
+
+                                <!-- Promo Code -->
+                                <div class="promo-section">
+                                    <div class="promo-input-wrapper">
+                                        <input 
+                                            type="text" 
+                                            id="discountCode" 
+                                            class="promo-input" 
+                                            placeholder="Nhập mã giảm giá"
+                                        >
+                                        <button type="button" id="applyDiscountBtn" class="promo-btn">
+                                            Áp dụng
+                                        </button>
+                                    </div>
+                                    <div id="discountMessage" class="promo-message"></div>
+                                </div>
+
+                                <div class="price-row discount-row" id="discountRow" style="display: none;">
+                                    <span class="price-label">Giảm giá</span>
+                                    <span class="price-value discount" id="discountAmount">0 đ</span>
+                                </div>
+
+                                <!-- Refund Info -->
+                                <div id="refundSection" class="refund-section" style="display: none;">
+                                    <div class="refund-alert">
+                                        <span class="refund-icon">💡</span>
+                                        <div class="refund-content">
+                                            <span class="refund-label">Hoàn tiền buổi học bị hủy</span>
+                                            <span class="refund-details" id="refundDetails"></span>
+                                        </div>
+                                        <span class="price-value discount" id="refundAmount">0 đ</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="divider-bold"></div>
+
+                            <!-- Total -->
+                            <div class="total-section">
+                                <div class="total-row">
+                                    <span class="total-label">Tổng thanh toán</span>
+                                    <span class="total-amount" id="totalAmount">5,000,000 đ</span>
+                                </div>
+                                <div class="due-info">
+                                    <span class="due-icon">⏰</span>
+                                    <span class="due-text">Hạn thanh toán: <strong id="dueDate">12/05/2025</strong></span>
+                                    <span class="due-countdown" id="countdown">(Còn 7 ngày)</span>
+                                </div>
+                            </div>
+
+                            <!-- Terms -->
+                            <div class="terms-wrapper">
+                                <label class="terms-checkbox">
+                                    <input type="checkbox" id="termsCheckbox">
+                                    <span class="checkmark"></span>
+                                    <span class="terms-text">
+                                        Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và <a href="#">Chính sách hoàn tiền</a>
+                                    </span>
+                                </label>
+                                <div id="termsError" class="error-text" style="display: none;">
+                                    Vui lòng đồng ý với điều khoản để tiếp tục
+                                </div>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="action-buttons">
+                                <button type="button" class="btn btn-secondary" id="cancelBtn">
+                                    Hủy bỏ
+                                </button>
+                                <button type="button" class="btn btn-primary" id="submitBtn">
+                                    <span class="btn-icon">🔒</span>
+                                    <span class="btn-text">Thanh toán ngay</span>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content success-modal">
+            <div class="success-animation">
+                <div class="success-checkmark">
+                    <svg viewBox="0 0 52 52">
+                        <circle cx="26" cy="26" r="25" fill="none"/>
+                        <path fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                </div>
+            </div>
+            <h2 class="success-title">Thanh toán thành công!</h2>
+            <p class="success-subtitle">Cảm ơn bạn đã tin tưởng GENX PK STORY</p>
+            
+            <div class="success-details">
+                <div class="success-item">
+                    <span class="success-label">Mã hóa đơn</span>
+                    <span class="success-value" id="successInvoiceNumber">-</span>
+                </div>
+                <div class="success-item">
+                    <span class="success-label">Số tiền</span>
+                    <span class="success-value highlight" id="successAmount">-</span>
+                </div>
+                <div class="success-item">
+                    <span class="success-label">Ngày thanh toán</span>
+                    <span class="success-value" id="successDate">-</span>
+                </div>
+            </div>
+
+            <div class="success-info">
+                <div class="info-item">
+                    <span class="info-icon">📧</span>
+                    <span>Email xác nhận đã được gửi</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-icon">🔗</span>
+                    <span>Link học sẽ được kích hoạt trong 5 phút</span>
+                </div>
+            </div>
+
+            <div class="success-actions">
+                <button class="btn btn-outline" onclick="window.location.href='/'">
+                    Về trang chủ
+                </button>
+                <button class="btn btn-primary" onclick="window.location.href='/schedule'">
+                    Xem lịch học
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Đang xử lý thanh toán...</p>
+            <p class="loading-subtext">Vui lòng không tắt trình duyệt</p>
+        </div>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+</html>

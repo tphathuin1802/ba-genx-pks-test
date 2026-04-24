@@ -1,0 +1,40 @@
+{
+  "invoice_response": {
+    "invoice_id": "inv-20260422-001",
+    "invoice_number": "INV-2026-04-001",
+    "enrollment_id": "enroll-789-xyz",
+    "student_id": "student-101",
+    "calculation_details": {
+      "base_amount": 5000000,
+      "promo_code": {
+        "code": "SAVE10",
+        "type": "PERCENTAGE",
+        "value": 10,
+        "discount_amount": 500000
+      },
+      "subtotal_after_discount": 4500000,
+      "refunds": [
+        {
+          "session_id": "session-005",
+          "date": "2026-05-08",
+          "amount": 250000,
+          "reason": "Instructor sick"
+        },
+        {
+          "session_id": "session-012",
+          "date": "2026-05-28",
+          "amount": 250000,
+          "reason": "Center maintenance"
+        }
+      ],
+      "total_refund": 500000,
+      "final_amount": 4000000
+    },
+    "payment_info": {
+      "currency": "VND",
+      "due_date": "2026-04-25T23:59:59Z",
+      "status": "pending"
+    },
+    "created_at": "2026-04-22T11:00:10Z"
+  }
+}
